@@ -1,7 +1,7 @@
 {
   "base_name": "node:boron",
   "author": "ShaoYang",
-  "docker_repo": "registry.cn-beijing.aliyuncs.com/shaoyang_builds/",
+  "docker_repo": "registry.cn-beijing.aliyuncs.com/shaoyang_builds",
   "image_name": "parse-server",
   "service_name": "parse-server",
   "debug_yml": "docker/docker-compose.debug.yml",
