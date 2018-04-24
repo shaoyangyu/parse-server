@@ -1,0 +1,18 @@
+{
+  "base_name": "node:boron",
+  "author": "ShaoYang",
+  "docker_repo": "registry.cn-beijing.aliyuncs.com/shaoyang_builds/",
+  "image_name": "parse-server",
+  "service_name": "parse-server",
+  "debug_yml": "docker/docker-compose.debug.yml",
+  "prod_yml": "docker/docker-compose.yml",
+  "rancher_yml": "docker/docker-compose.rancher.yml",
+  "docker_file": "docker/Dockerfile",
+  "docker_parse": "docker/.docker_parse.json",
+  "test_command": "echo FAKE passed",
+  "up_command": "npm run dev",
+  "lint_command": "rubocop -a",
+  "shell_command": "/bin/bash",
+  "package_command": "echo no package",
+  "db_type": "mongo"
+}

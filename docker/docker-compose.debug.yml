@@ -1,0 +1,26 @@
+version: '2.1'
+volumes:
+  mongodb:
+    driver: local
+services:
+  parse-server:
+    image: parse-server
+    ports:
+    - "1337:1337"
+    links:
+    - db:mongo
+    volumes:
+    - ../config/config.json:/parse-server/config/config.json
+    command: bash -lc "tail -f /dev/null"
+  db:
+    image: mongo
+    ports:
+    - "27017:27017"
+    healthcheck:
+      test: ["CMD","echo", "db.stats().ok", "|","mongo db:27017/test","--quiet"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    volumes:
+    - mongodb:/data/db
+              

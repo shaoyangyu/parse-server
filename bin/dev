@@ -25,6 +25,7 @@ try {
   // Run and watch dist 
   nodemon({
     script: 'bin/parse-server',
+    args:["config/config.json"],
     ext: 'js json',
     watch: 'lib'
   });

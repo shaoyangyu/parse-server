@@ -18,4 +18,6 @@ ENV PORT=1337
 
 EXPOSE $PORT
 
-ENTRYPOINT ["npm", "start", "--"]
+#ENTRYPOINT ["npm", "start", "--"]
+#ENTRYPOINT ["npm", "run","dev"]
+CMD tail -f /dev/null

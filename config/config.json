@@ -1,0 +1,18 @@
+{
+    "appId": "testid",
+    "masterKey": "testkey",
+    "databaseURI": "mongodb://mongo/test",
+    "cloud":"lib/cloud/main.js",
+    "verifyUserEmails": true,
+    "preventLoginWithUnverifiedEmail": false,
+    "publicServerURL": "http://shaoyang.server.com:1337/parse",
+    "appName": "Parse App", 
+    "emailAdapter": {  
+        "module": "@parse/simple-mailgun-adapter",    
+        "options": {      
+            "fromAddress": "Mailgun Sandbox <postmaster@sandbox7359e037b730472488956254b1d3a50a.mailgun.org>",      
+            "domain": "sandbox7359e037b730472488956254b1d3a50a.mailgun.org",      
+            "apiKey": "key-***********************"
+        }  
+    }
+}
